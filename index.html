@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="fi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Loviisa Open Dance Company</title>
+    <link rel="stylesheet" href="css/foundation.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="row navi">
+        <div class="large-12 columns text-right">
+            <a id="info-link">Info</a>
+            <a id="teaser-link">Teaser</a>
+            <a id="partners-link">Partners</a>
+            <a id="photos-link">Photos</a>
+            <a id="lodc-link">LODC</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-10 columns logo">
+            <h1>Loviisa Open Dance Company</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-8 columns title">
+            <h2>O.v.E. in progress</h2>
+        </div>
+    </div>
+</div>
+<div class="info white">
+    <div class="row">
+        <div class="large-6 columns">
+            <h2>Tanssi meressä.</h2>
+            <p>O.v.E on saanut inspiraationsa kreikkalaisen mytologian Orfeuksesta ja Eurydykeestä. Kuka johtaa ryhmää kohti valoa? Kuinka heikkoja olemme heikoimpina
+                hetkinämme? 8 tanssijaa meressä ja rannalla. Myös yleisöllä on mahdollisuus halutessaan seurata esitystä vedessä, joten varatkaa siihen sopivat
+                vaatteet.</p>
+        </div>
+        <div class="large-6 columns">
+            <h2>Dans vid havet.</h2>
+            <p>O.v.E. är inspirerad av den grekiska myten om Orfeus och Eurydike. Vem leder gruppen mot ljuset? 8 dansare i vattnet och på stranden. Också publiken har
+                möjlighet att följa med föreställningen i vattnet, så tag med er lämpliga kläder.</p>
+        </div>
+    </div>
+</div>
+<div class="teaser dark">
+    <div class="row">
+        <div class="large-12 columns text-center">
+            <div id="play" class="arrow"></div>
+        </div>
+    </div>
+</div>
+<div class="sponsors white">
+    <div class="row">
+        <div class="large-12 columns text-center">
+            <h3>Yhteistyössä:</h3>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="small-block-grid-4">
+            <li><a href="http://www.loviisa.fi"><img src="img/logo-loviisa.png" alt="Loviisa"></a></li>
+            <li><a href="http://www.peakpress.net"><img src="img/logo-peak-press.png" alt="Peak Press"></a></li>
+            <li><a href="http://www.loviisantanssiopisto.fi/"><img src="img/logo-tanssiopisto.png" alt="Loviisan Tanssiopisto"></a></li>
+            <li><a href="http://www.merittabra.fi"><img src="img/logo-meritta-bra.png" alt="Meritta Bra"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="photos dark">
+    <div class="row">
+        <ul class="small-block-grid-3">
+            <li><img src="img/pic-01.jpg"></li>
+            <li><img src="img/pic-02.jpg"></li>
+            <li><img src="img/pic-03.jpg"></li>
+        </ul>
+
+    </div>
+</div>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+
+    function onYouTubeIframeAPIReady() {
+
+        var player = new YT.Player('play', {
+            height: '480',
+            width: '853',
+            videoId: 'QSff3OxO2M4',
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    $(function () {
+        $('#play').click(function () {
+            var tag = document.createElement('script');
+            tag.src = "//www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            $(this).removeClass('arrow');
+        });
+    });
+</script>
+</body>
+</html>
