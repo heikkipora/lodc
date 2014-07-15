@@ -33,11 +33,6 @@ a, h2, h3 {
     color: black;
 }
 
-.navi a {
-    display: inline-block;
-    margin: 1em;
-}
-
 .logo {
     margin: 2em 0;
     height: 5em;
