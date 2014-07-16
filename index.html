@@ -8,7 +8,7 @@
     <meta name="description" content="8 tanssijaa meressä ja rannalla - 26.& 27.7.2014. klo 18:00"/>
     <meta name="keywords" content="loviisa open dance company nykytanssi orfeus esitys"/>
     <meta property="og:title" content="LODC - O.v.E. in progress"/>
-    <meta property="og:description" content="8 tanssijaa meressä ja rannalla - 26.& 27.7.2014. klo 18:00"/>
+    <meta property="og:description" content="8 tanssijaa meressä ja rannalla - 26.& 27.7.2014. klo 18:00. Vapaa pääsy - tervetuloa!"/>
     <meta property="og:image" content="http://lodc.fi/img/header.jpg"/>
     <meta property="og:url" content="http://lodc.fi"/>
     <meta property="og:site_name" content="Loviisa Open Dance Company"/>
@@ -73,7 +73,7 @@
                 <span class="red">Musiikki / Musik:</span> “Orfeo ed Euridice” C. W. Gluck<br/>
                 <span class="red">Valokuvat / Fotografi:</span> Teemu Silvàn</p>
         </div>
-      </div>
+    </div>
 </div>
 <div class="teaser dark">
     <div class="row">
@@ -160,29 +160,10 @@
 <script>
     $(document).foundation();
 
-    function onYouTubeIframeAPIReady() {
-
-        var player = new YT.Player('player', {
-            width: $('#player').width(),
-            height: $('#player').height() - 7,
-            videoId: 'QSff3OxO2M4',
-            events: {
-                'onReady': onPlayerReady
-            }
-        });
-    }
-
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
-
     $(function () {
         $('#player').click(function () {
-            var tag = document.createElement('script');
-            tag.src = "//www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-            $(this).removeClass('arrow');
+            var player = $('<iframe src="//player.vimeo.com/video/100903882?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>').attr('width', $('#player').width()).attr('height', $('#player').height())
+            $(this).replaceWith(player);
         });
 
         $('.dance').click(function () {
