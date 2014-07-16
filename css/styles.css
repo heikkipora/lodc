@@ -71,8 +71,12 @@ a, h2, h3 {
     background: rgb(16, 16, 16);
 }
 
+.shows h3 {
+    margin: 2em 0 2em 0;
+    color: rgb(246, 246, 246);
+}
+
 .footer {
-    background: rgb(230, 230, 230);
     padding: 2em 0;
 }
 
@@ -92,6 +96,7 @@ a, h2, h3 {
     .logo {
         margin-top: 0.5em;
     }
+
     .header .dance {
         width: 108px;
         height: 41px;
