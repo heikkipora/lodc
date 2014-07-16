@@ -18,11 +18,24 @@ a, h2, h3 {
     height: 100%;
     background: url('../img/header.jpg') no-repeat center center;
     background-size: cover;
+    position: relative;
 }
 
 .header h2, .header h3 {
     font-family: PublicSquare, sans-serif;
     color: black;
+}
+
+.header .dance {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 213px;
+    height: 81px;
+    margin-left: -107px;
+    background: url('../img/tanssi-meressa.png') no-repeat;
+    background-size: 100%;
+    cursor: pointer;
 }
 
 .logo {
@@ -73,4 +86,15 @@ a, h2, h3 {
     height: 21px;
     background-size: 100% auto;
     display: inline-block;
+}
+
+@media only screen and (max-height: 500px) {
+    .logo {
+        margin-top: 0.5em;
+    }
+    .header .dance {
+        width: 108px;
+        height: 41px;
+        margin-left: -54px;
+    }
 }

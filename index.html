@@ -33,6 +33,7 @@
             <img src="img/plagen.png" alt="26. & 27.7.2014 kl.18:00, Loviisan uimaranta – Plagen">
         </div>
     </div>
+    <div class="dance"></div>
 </div>
 <div class="header show-for-landscape">
     <div class="row">
@@ -49,6 +50,7 @@
             <img src="img/plagen.png" alt="26. & 27.7.2014 kl.18:00, Loviisan uimaranta – Plagen">
         </div>
     </div>
+    <div class="dance"></div>
 </div>
 <div class="info white">
     <div class="row">
@@ -156,6 +158,12 @@
             var firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             $(this).removeClass('arrow');
+        });
+
+        $('.dance').click(function() {
+            $('html, body').animate({
+                scrollTop: $(".info").offset().top
+            }, 1000);
         });
     });
 </script>
