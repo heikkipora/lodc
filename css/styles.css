@@ -63,8 +63,16 @@ a, h2, h3 {
     padding: 4em 0;
 }
 
+.lodc .description {
+    line-height: 100%;
+}
+
 .sponsors h3 {
     margin-bottom: 2em;
+}
+
+.sponsors {
+    padding-top: 0;
 }
 
 .dark {
