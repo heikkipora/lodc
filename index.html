@@ -50,8 +50,8 @@
 </div>
 <div class="teaser dark">
     <div class="row">
-        <div class="large-12 columns text-center">
-            <div id="play" class="arrow"></div>
+        <ul class="small-block-grid-1">
+            <li><img id="player" src="img/teaser.jpg"></li>
         </div>
     </div>
 </div>
@@ -111,9 +111,9 @@
 
     function onYouTubeIframeAPIReady() {
 
-        var player = new YT.Player('play', {
-            height: '480',
-            width: '853',
+        var player = new YT.Player('player', {
+            width: $('#player').width(),
+            height: $('#player').height() - 7,
             videoId: 'QSff3OxO2M4',
             events: {
                 'onReady': onPlayerReady
@@ -126,7 +126,7 @@
     }
 
     $(function () {
-        $('#play').click(function () {
+        $('#player').click(function () {
             var tag = document.createElement('script');
             tag.src = "//www.youtube.com/iframe_api";
             var firstScriptTag = document.getElementsByTagName('script')[0];
