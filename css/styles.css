@@ -16,7 +16,7 @@ a, h2, h3 {
 
 .header {
     height: 100%;
-    background: url('../img/header.jpg') no-repeat;
+    background: url('../img/header.jpg') no-repeat center center;
     background-size: cover;
 }
 
